@@ -16,10 +16,12 @@
 
 - (void)drawRect:(CGRect)rect {
     // Drawing code
+    // 画矩形
     [self drawRectangle];
     [self drawEllipse];
     [self drawTriangle];
     [self drawCurve];
+    [self drawLine];
 }
 
 // 绘制矩形
@@ -157,6 +159,15 @@
     CGContextFillPath(ctx);
 }
 
+// 划线
+- (void)drawLine {
+    CGContextRef ctx = UIGraphicsGetCurrentContext();
+    CGContextSetStrokeColorWithColor(ctx, [UIColor greenColor].CGColor);//设置线的颜色
+    CGContextMoveToPoint(ctx,20,200);//画线的起始点位置
+    CGContextAddLineToPoint(ctx,200,160);//画第一条线的终点位置
+    CGContextStrokePath(ctx);//把线在界面上绘制出来
+    CGContextSetLineWidth(ctx, 2);//
+}
 
 
 @end
