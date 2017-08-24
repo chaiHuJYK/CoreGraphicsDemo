@@ -165,8 +165,8 @@
     CGContextSetStrokeColorWithColor(ctx, [UIColor greenColor].CGColor);//设置线的颜色
     CGContextMoveToPoint(ctx,20,200);//画线的起始点位置
     CGContextAddLineToPoint(ctx,200,160);//画第一条线的终点位置
+    CGContextSetLineWidth(ctx, 1);//
     CGContextStrokePath(ctx);//把线在界面上绘制出来
-    CGContextSetLineWidth(ctx, 2);//
 }
 
 
