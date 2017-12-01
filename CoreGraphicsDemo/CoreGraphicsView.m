@@ -141,7 +141,6 @@
     CGContextRef ctx = UIGraphicsGetCurrentContext();
     // 创建一个新的空图形路径。
     CGContextSetFillColorWithColor(ctx, [UIColor purpleColor].CGColor);
-    
     /**
      *  @brief 在当前路径添加圆弧 参数按顺序说明
      *
